@@ -1,0 +1,278 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Evolutesix Book
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%        PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+% Consider adding in the sidecap package in place of wrapfigure.
+% http://ftp.snt.utwente.nl/pub/software/tex/macros/latex/contrib/sidecap/sidecap.pdf
+% https://ctan.org/pkg/sidecap?lang=en
+
+
+
+
+\documentclass[
+        11pt, % Default font size
+        openany, % Chapters start on the next available empty page, not odd ones as is the default
+%        graham, % Book style being created, this must be specified and the options are: graham or robert
+]{book}
+
+\input{preamble}
+
+% All bibliographies to be used in the book
+\addbibresource{all-vol-bibliography.bib}
+%\addbibresource{jack-graham-bibliography.bib}
+
+
+%----------------------------------------------------------------------------------------
+%        HYPHENATION
+%----------------------------------------------------------------------------------------
+
+
+\hyphenation{self-or-gan-is-ing self-or-gan-is-a-tion self-gov-er-ning self-gov-er-nance Bas-sech-es a-part-heid quan-tum man-che-ster non-equi-lib-ri-um equi-lib-ri-um sham-bha-la tyn-dale ham-mered self-de-vel-op-ment every-thing chris-ten-sen}
+
+
+%----------------------------------------------------------------------------------------
+
+\makeindex 
+
+\begin{document}
+
+%\makeindex MasterEinstein-Picasso-0.5
+
+%----------------------------------------------------------------------------------------
+%        FRONT COVER
+%----------------------------------------------------------------------------------------
+
+
+%\includepdf{cover} % Include an image as the full page background, must be the dimensions of the paper to fill the page entirely. Can be a jpg etc., not only pdf.
+
+
+%\typeout{The text height is \the\textheight}
+%\typeout{The headsep is \the\headsep}
+%\typeout{The footskip is \the\footskip}
+
+%\cleardoublepage
+
+%\input{0-1-testimonials}
+
+%----------------------------------------------------------------------------------------
+%        INSIDE COVER
+%----------------------------------------------------------------------------------------
+
+
+
+\begin{titlepage}
+        \centering
+		 \vspace*{1.0cm}
+		{\sffamily \scshape\Huge Rebuild: \par\medskip The Economy, Leadership \par\bigskip  and You} \par
+         \vspace{0.5cm}
+        {\large\bfseries A toolkit for builders of a better world. \par}
+        \vspace{1.0cm}
+        {\Large\itshape Graham Boyd and Jack Reardon\par}
+        {\large June 2020 \par}                
+        \begin{chapterquotation}
+                \vspace{1cm} 
+                        Others have seen what is and asked why. I have seen what could be and asked why not.
+                
+                \raggedleft\textemdash Pablo Picasso
+        \end{chapterquotation}
+        {\scshape \vspace{1cm} 
+        \small Beta release 0.9.9  
+        Provided without any warranty, neither explicit nor implicit. \par}
+        \vfill
+        \includegraphics{./Images/logo_evolutesix-05} \hfill
+\end{titlepage}
+
+
+%----------------------------------------------------------------------------------------
+%        BOOK INFORMATION
+%----------------------------------------------------------------------------------------
+
+
+\bookinformationpage{ \small
+Published by Evolutesix Books, London, UK.
+
+
+\bigskip
+
+
+	Hardcover ISBN: 978-1-913629-02-1 \\
+	Paperback ISBN: 978-1-913629-01-4 \\
+	e-book ISBN: 978-1-913629-00-7 
+        
+    \bigskip
+        
+    Copyright \textcopyright~Graham Boyd and Jack Reardon, September 2020
+        
+    \bigskip
+        
+The rights of Graham Boyd and Jack Reardon to be identified as the authors of this work has been asserted by them in accordance with the Copyright, Designs and Patents Act 1988.
+        
+        \bigskip
+        
+
+%All rights reserved. No part of this publication may be reproduced, stored in or introduced into a retrieval system, or transmitted, in any form, or by any means without the prior written permission of the publisher. Any person who does any unauthorised act in relation to this publication may be liable to criminal prosecution and civil claims for damages. 
+
+
+
+        \bigskip
+        
+A CIP catalogue record will be available from the British Library.
+
+
+\bigskip
+
+
+Typeset using \LaTeX. 
+
+Cover design and illustrations by Nikyta Guleria\\
+Editing by Anna Kierstan
+
+\bigskip
+
+
+This book is sold subject to the condition that it shall not, by way of trade or otherwise, be lent, re-sold, hired out, or otherwise circulated without the publisher's prior consent in any form of binding or cover other than that in which it is published and without a similar condition including this condition being imposed on the subsequent purchaser.
+
+
+\bigskip
+
+
+This book is published in at least one electronic form under the standard Evolutesix Books pricing model of ``Pay what it is worth to you'', and in both paperback and hardback on a cost plus ``what it is worth to you''.
+
+
+}
+
+
+%----------------------------------------------------------------------------------------
+%        DEDICATION
+%----------------------------------------------------------------------------------------
+
+
+\dedicationpage{To all those brave souls\\ who have, over the past decades,\\ invested their time, effort and money\\ in rising to our challenges\\ long before they became the emergencies we now face.}
+
+
+%----------------------------------------------------------------------------------------
+%        FRONT MATTER
+%----------------------------------------------------------------------------------------
+
+
+\frontmatter
+
+
+\tableofcontents
+
+
+\setcounter{tocdepth}{1} % Ensure figures and tables show regardless of book style (a tocdepth of 0 hides them)
+
+
+\listoftables
+
+
+\listoffigures
+
+
+\input{./0-preface-0.5}
+\input{./0-3-CoverArt-Meaning}
+
+%----------------------------------------------------------------------------------------
+%        MAIN MATTER
+%----------------------------------------------------------------------------------------
+
+
+\mainmatter
+
+
+%\partplain{Einstein and Picasso}
+\partdescription{Art and Physics}{In which we introduce the foundations of this book: your experienced reality is a consequence of how you look at the world, i.e., the lenses you look through. Cubism, relativity and quantum mechanics give us new lenses on business and economics.}
+\label{part:intro}
+\input{./1-emergence-theme-0.5}
+\input{./2-Emergence-Einstein-Picasso-0.5}
+
+
+
+%\partplain{Economy}
+\partdescription{Economy}{These chapters give an overview of how the economy as it is has emerged, and propose ways of reinventing the economy: the Economy of the Free. Drawing on apartheid as a metaphor you'll see why our current structuring of companies cannot deliver the economy our society needs, how the FairShares Commons addresses that issue, and how a new approach to economics can address the issues of neoclassical economics. }
+\label{part:economy}
+\input{./3-how-do-we-know-our-economy-0.5}
+\input{./4-all-about-ownership-0.5}
+\input{./5-how-do-I-change-my-economy-0.5}
+\input{./6-general-theory-economies-0.5}
+
+
+\partdescription{You}{We humans are the alpha and omega of society, its economy, and our organisations. These chapters introduce you to how your meaning-making stories create your self-identity, and are the lens you use to look at everything through; how your fluidity in the 28 thought forms of transformational thinking determine your capacity to grasp a nebulous, VUCA world; and what you can do to harness tension in your life to grow.}
+%\partplain{You}
+\label{exit}
+\label{part:you}
+\input{./7-how-do-I-know-myself-0.5}
+\input{./8-meaning-making-0.5}
+\input{./9-sense-making-0.5}
+\input{./10-nature-0.5}
+\input{./11-integration-0.5}
+
+
+
+\partdescription{Organisations}{The organisation is a living, meaning-making being just like you are. So it ought to be looked at across all aspects, from legal incorporation as a free company using  the FairShares Commons, have tasks and roles structured using dynamic governance, with developmental inter-personal and intra-persona interactions.}
+%\partplain{Organisations}
+ \label{part:organisations}
+\input{./12-who-is-your-organisation-0.5}
+\input{./13-human-0.5}
+\input{./14-tasks-0.5}
+\input{./15-incorporation-0.5}
+\input{./16-ecosystem-0.5}
+
+
+
+
+\partdescription{Turning to Action}{By the end of these chapters, hopefully, you have the even more energy and motivation to act; and greater clarity on how to act to make the best possible sustainable difference.}
+%\partplain{Turning to Action}
+ \label{part:action}  
+\input{./17-conclusion-0.5}
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%        BACK MATTER
+%----------------------------------------------------------------------------------------
+
+
+\backmatter
+
+
+\input{./acknowledgements-0.5}
+
+\partdescription{Appendix}{}
+
+\input{./18-appendix-deeper-general-theory-economies-0.5}
+
+\addcontentsline{toc}{part}{Bibliography}
+\printbibliography % Output the bibliography
+
+\addcontentsline{toc}{part}{Glossary}
+\printglossaries  % Output the glossaries
+
+\addcontentsline{toc}{part}{Index}
+\printindex  % Output the Index after the Bibliography
+
+%----------------------------------------------------------------------------------------
+%        BACK COVER
+%----------------------------------------------------------------------------------------
+
+
+%\cleardoublepage\thispagestyle{empty}~\newpage % Ensure that the back cover is on an even (left side) page
+
+
+%\includepdf{cover} % Include an image as the full page background, must be the dimensions of the paper to fill the page entirely
+
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}
