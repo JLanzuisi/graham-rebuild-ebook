@@ -1,12 +1,31 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Evolutesix Book
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%        PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+% Consider adding in the sidecap package in place of wrapfigure.
+% http://ftp.snt.utwente.nl/pub/software/tex/macros/latex/contrib/sidecap/sidecap.pdf
+% https://ctan.org/pkg/sidecap?lang=en
+
+
+
+
 \documentclass[
         11pt, % Default font size
         openany, % Chapters start on the next available empty page, not odd ones as is the default
-]{book}
+        graham, % Book style being created, this must be specified and the options are: graham or robert
+]{evolutesixbook1}
 
-\input{preamble}
+
 
 % All bibliographies to be used in the book
 \addbibresource{all-vol-bibliography.bib}
+%\addbibresource{jack-graham-bibliography.bib}
 
 
 %----------------------------------------------------------------------------------------
@@ -19,7 +38,27 @@
 
 %----------------------------------------------------------------------------------------
 
+\makeindex 
+
 \begin{document}
+
+%\makeindex MasterEinstein-Picasso-0.5
+
+%----------------------------------------------------------------------------------------
+%        FRONT COVER
+%----------------------------------------------------------------------------------------
+
+
+%\includepdf{cover} % Include an image as the full page background, must be the dimensions of the paper to fill the page entirely. Can be a jpg etc., not only pdf.
+
+
+%\typeout{The text height is \the\textheight}
+%\typeout{The headsep is \the\headsep}
+%\typeout{The footskip is \the\footskip}
+
+%\cleardoublepage
+
+\input{0-1-testimonials}
 
 %----------------------------------------------------------------------------------------
 %        INSIDE COVER
@@ -30,9 +69,11 @@
 \begin{titlepage}
         \centering
 		 \vspace*{1.0cm}
+%        {\sffamily \scshape\Huge Picasso and Einstein: \par\medskip the Economy, Leadership \par\bigskip  and You} \par
 		{\sffamily \scshape\Huge Rebuild: \par\medskip The Economy, Leadership \par\bigskip  and You} \par
          \vspace{0.5cm}
         {\large\bfseries A toolkit for builders of a better world. \par}
+%        {\large\bfseries How to transform yourself and your business into a powerful solution to today's global crises. \par}
         \vspace{1.0cm}
         {\Large\itshape Graham Boyd and Jack Reardon\par}
         {\large June 2020 \par}                
@@ -46,7 +87,9 @@
         \small Beta release 0.9.9  
         Provided without any warranty, neither explicit nor implicit. \par}
         \vfill
-        \includegraphics{./Images/logo_evolutesix-05} \hfill
+        \includegraphics[width=0.35\textwidth]{./Images/logo_evolutesix-05} \hfill
+%        \includegraphics{./Images/under-construction-sign-th}        
+% \hfill  \includegraphics[width=0.20\textwidth]{./Images/by-sa}                
 \end{titlepage}
 
 
@@ -75,6 +118,10 @@ Published by Evolutesix Books, London, UK.
 The rights of Graham Boyd and Jack Reardon to be identified as the authors of this work has been asserted by them in accordance with the Copyright, Designs and Patents Act 1988.
         
         \bigskip
+        
+
+%All rights reserved. No part of this publication may be reproduced, stored in or introduced into a retrieval system, or transmitted, in any form, or by any means without the prior written permission of the publisher. Any person who does any unauthorised act in relation to this publication may be liable to criminal prosecution and civil claims for damages. 
+
 
 
         \bigskip
@@ -144,12 +191,15 @@ This book is published in at least one electronic form under the standard Evolut
 \mainmatter
 
 
+%\partplain{Einstein and Picasso}
 \partdescription{Art and Physics}{In which we introduce the foundations of this book: your experienced reality is a consequence of how you look at the world, i.e., the lenses you look through. Cubism, relativity and quantum mechanics give us new lenses on business and economics.}
 \label{part:intro}
 \input{./1-emergence-theme-0.5}
 \input{./2-Emergence-Einstein-Picasso-0.5}
 
 
+
+%\partplain{Economy}
 \partdescription{Economy}{These chapters give an overview of how the economy as it is has emerged, and propose ways of reinventing the economy: the Economy of the Free. Drawing on apartheid as a metaphor you'll see why our current structuring of companies cannot deliver the economy our society needs, how the FairShares Commons addresses that issue, and how a new approach to economics can address the issues of neoclassical economics. }
 \label{part:economy}
 \input{./3-how-do-we-know-our-economy-0.5}
@@ -159,6 +209,7 @@ This book is published in at least one electronic form under the standard Evolut
 
 
 \partdescription{You}{We humans are the alpha and omega of society, its economy, and our organisations. These chapters introduce you to how your meaning-making stories create your self-identity, and are the lens you use to look at everything through; how your fluidity in the 28 thought forms of transformational thinking determine your capacity to grasp a nebulous, VUCA world; and what you can do to harness tension in your life to grow.}
+%\partplain{You}
 \label{exit}
 \label{part:you}
 \input{./7-how-do-I-know-myself-0.5}
@@ -170,6 +221,7 @@ This book is published in at least one electronic form under the standard Evolut
 
 
 \partdescription{Organisations}{The organisation is a living, meaning-making being just like you are. So it ought to be looked at across all aspects, from legal incorporation as a free company using  the FairShares Commons, have tasks and roles structured using dynamic governance, with developmental inter-personal and intra-persona interactions.}
+%\partplain{Organisations}
  \label{part:organisations}
 \input{./12-who-is-your-organisation-0.5}
 \input{./13-human-0.5}
@@ -181,8 +233,14 @@ This book is published in at least one electronic form under the standard Evolut
 
 
 \partdescription{Turning to Action}{By the end of these chapters, hopefully, you have the even more energy and motivation to act; and greater clarity on how to act to make the best possible sustainable difference.}
+%\partplain{Turning to Action}
  \label{part:action}  
 \input{./17-conclusion-0.5}
+
+
+
+
+
 
 %----------------------------------------------------------------------------------------
 %        BACK MATTER
@@ -203,6 +261,22 @@ This book is published in at least one electronic form under the standard Evolut
 
 \addcontentsline{toc}{part}{Glossary}
 \printglossaries  % Output the glossaries
+
+\addcontentsline{toc}{part}{Index}
+\printindex  % Output the Index after the Bibliography
+
+%----------------------------------------------------------------------------------------
+%        BACK COVER
+%----------------------------------------------------------------------------------------
+
+
+%\cleardoublepage\thispagestyle{empty}~\newpage % Ensure that the back cover is on an even (left side) page
+
+
+%\includepdf{cover} % Include an image as the full page background, must be the dimensions of the paper to fill the page entirely
+
+
+%----------------------------------------------------------------------------------------
 
 
 \end{document}
