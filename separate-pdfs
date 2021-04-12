@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm *
+pdfseparate -f $1 -l $2 ../OLDMasterEinstein-Picasso-1.pdf %d.pdf
+pdfunite *.pdf old.pdf
